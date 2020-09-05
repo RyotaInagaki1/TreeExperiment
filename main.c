@@ -27,7 +27,7 @@ void clean(Node* a){
             clean(lis[i]);
         }
         free(a);
-        printf("Cleand");
+        printf("Cleand\n");
     }
 }
 void PreOrder(Node* a){
@@ -41,16 +41,21 @@ void PreOrder(Node* a){
     }
 }
 int main(){
-    Node* thing=newNode();
-    Node** things=malloc(2*sizeof(Node*));
-    things[0]=thing;
-    things[1]=thing;
+    Node** cosas=malloc(0);
+    Node* thing=add(cosas, 22,0);
+    Node* c1=add(cosas, 25, 0);
+    Node* c2=add(cosas, -12, 0);
+    Node* c3=add(cosas, 26, 0);
+    Node* c4=add(cosas, 27, 0);
+    Node** things[2];
+    things[0]=c3;
+    things[1]=c4;
     Node* thing2=add(things, 3, 2);
-    Node** things2=malloc(2*sizeof(Node*));
-    things2[0]=thing;
-    things2[1]=thing;
-    Node* thing3=add(things, 4, 2);
-    Node** things3=malloc(2*sizeof(Node*));
+    Node** things2[2];
+    things2[0]=c1;
+    things2[1]=c2;
+    Node* thing3=add(things2, 4, 2);
+    Node** things3[2];
     things3[0]=thing2;
     things3[1]=thing3;
     Node* thing4=add(things3, 5, 2);
